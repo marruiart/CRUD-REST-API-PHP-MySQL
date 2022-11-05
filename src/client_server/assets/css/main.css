@@ -1,0 +1,348 @@
+/*------------------------------------------ ESTILOS GENERALES ------------------------------------------*/
+
+@font-face {
+    font-family: 'HarryPotter';
+    src: url("../fonts/harrypotter.ttf");
+}
+
+:root {
+    --header_c: #0d2731;
+    --subheader_c: #4b7b8f;
+    --enfasis_c: #27685b;
+    --light_enfasis_c: #92cec2;
+    --light_bg_c: #fdfdfd;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    /* Fuentes del body */
+    -webkit-font-smoothing: antialiased;
+    /* suavizar la fuente, evita que los navegadores pongan borde de sierra */
+    -moz-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: antialiased;
+}
+
+.--bg_header_c {
+    background-color: var(--header_c);
+}
+
+.--bg_enfasis_c {
+    background-color: var(--enfasis_c);
+}
+
+.--bg_subheader_c {
+    background-color: var(--subheader_c);
+}
+
+.--bg_light_bg_c {
+    background-color: var(--light_bg_c);
+}
+
+.--header_c {
+    color: var(--header_c);
+}
+
+a.--header_c:hover {
+    color: var(--subheader_c);
+}
+
+.--white {
+    color: white;
+}
+
+h1 {
+    font-family: 'HarryPotter', 'Lora', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 0.3em 0;
+    font-size: 7em;
+    font-weight: 400;
+    color: rgb(212, 163, 37);
+}
+
+h2 {
+    font-family: 'Lora', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 1.4em 0 0.3em 0;
+    font-size: 1.7em;
+    font-weight: 400;
+}
+
+h3 {
+    padding: 1.1em 0;
+    font-size: 1.05em;
+}
+
+a {
+    font-size: 1em;
+    color: var(--subheader_c);
+    text-decoration: none;
+}
+
+p {
+    max-width: 75ch;
+    font-size: 1em;
+}
+
+.--uppercase {
+    text-transform: uppercase;
+}
+
+.--centered {
+    display: flex;
+    place-content: center;
+    place-items: center;
+}
+
+.--text_center {
+    text-align: center;
+}
+
+/*------------------------------------------ CONTENT ------------------------------------------*/
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/*------------------------------------------ MENU ------------------------------------------*/
+
+.menu {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 5em;
+    width: 100%;
+    padding: 0 5em;
+}
+
+.menu__div {
+    display: flex;
+    justify-content: stretch;
+    width: 30%;
+    max-width: 300px;
+}
+
+.button--menu {
+    display: flex;
+    place-items: center;
+    height: 3em;
+    width: 100%;
+    min-width: max-content;
+    margin: 0 0.2em;
+    padding: 0 1em;
+    color: white;
+    background-color: var(--enfasis_c);
+    border: none;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+    transition: 500ms all;
+}
+
+.button--menu:hover {
+    color: black;
+    background-color: var(--light_enfasis_c);
+}
+
+/*------------------------------------------ HEADER ------------------------------------------*/
+
+.header {
+    width: 100%;
+}
+
+.header h1 {
+    display: flex;
+    place-items: center;
+}
+
+h1>img {
+    height: 1.5em;
+    padding: 0 0.3em;
+    margin-left: -50px;
+}
+
+/*------------------------------------------ MAIN ------------------------------------------*/
+
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 97%;
+    padding: 1em 5em;
+    box-shadow: 0 -10px 10px #8888882d;
+}
+
+/* TABLES */
+
+table {
+    width: 100%;
+    border: 1px solid #f2f2f2;
+    border-collapse: collapse;
+    margin: 1em 0;
+    box-shadow: 0 -5px 7px #8888882d;
+}
+
+.table--medium {
+    width: 70%;
+}
+
+.table--small {
+    width: 40%;
+}
+
+tr {
+    display: flex;
+    justify-content: stretch;
+}
+
+th,
+td {
+    width: 100%;
+    min-width: 130px;
+    padding: 0.7em;
+    border: 1px solid #f2f2f2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+tbody>tr:nth-child(even) {
+    background-color: #eeeeee;
+}
+
+tbody>tr:nth-child(odd) {
+    background-color: #fdfdfd;
+}
+
+.td--large {
+    width: 150%;
+}
+
+.td--small {
+    width: 15%;
+    max-width: 40px;
+    min-width: 35px;
+    padding: 0.7em 0.5em;
+    border: none;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+/* FORMS */
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    padding: 2em;
+    margin: 1em 0 1em 0;
+    width: 30%;
+    border: 1px solid #f2f2f2;
+    box-shadow: 0 -5px 7px #8888882d;
+}
+
+.--horizontal {
+    width: 100%;
+}
+
+.div--horizontal {
+    display: flex;
+    justify-content: stretch;
+    flex-wrap: wrap;
+}
+
+.form__div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form__div--horizontal {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.label {
+    margin: 1em 0 0.3em 0;
+    padding: 0.5em 0;
+    color: var(--header_c);
+}
+
+.input {
+    height: 2em;
+    width: 90%;
+    padding: 0 0.5em;
+    box-shadow: 5px 5px 5px #f8f8f8 inset;
+    border: 1px solid var(--header_c);
+    outline: 0.1em solid #0d27314c;
+    border-radius: 5px;
+}
+
+.input:focus {
+    background-color: #f8f8f8;
+    box-shadow: 5px 5px 5px #dedede inset;
+    outline: 0.1em solid var(--header_c);
+}
+
+.--display {
+    border: 1px solid #f2f2f2;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3em;
+    width: fit-content;
+    min-width: 40px;
+    padding: 0 1em;
+    background-color: var(--header_c);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 0.8em;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 100ms all;
+}
+
+.button:hover {
+    background-color: var(--subheader_c);
+    border: none;
+}
+
+.div__buttons {
+    display: flex;
+}
+
+.div__buttons>* {
+    margin: 1em 1em 1em 0;
+}
+
+/*------------------------------------------ FOOTER ------------------------------------------*/
+
+.footer {
+    height: 50px;
+    width: 100%;
+}
